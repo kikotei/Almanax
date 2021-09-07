@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8"/>
+	<meta name="author" content="Desreveaux Nathan">
+	<title>Almanax Wakfu</title>
+	<link rel="icon" type="image/jpg" sizes="260x260" href="https://img1.freepng.fr/20180609/lii/kisspng-dofus-the-brotherhood-of-the-tofu-video-ankama-wak-mini-wakfu-5b1b808e2caaf9.573382561528529038183.jpg">
+</head>
+
+<header></header>
+
+	<p id="today"></p> <br>
+	<p id ="tommmorow"> </p>
+
+
+<script type="text/javascript"> 
+var now = new Date(); 
+var debut = new Date("09/01/2021");
+var diff = Math.floor((now.getTime() - debut.getTime()) / (1000 * 3600 * 24));
+var almajour = diff % 5;
+var alamdemain = (diff + 1) % 5;
+var oracle = document.getElementById("today");
+var demain = document.getElementById("tommmorow");
+//alert(almajour);
+
+var almatext = ["+40 en Prospection", "20% d'XP et de vitesse de fabrication", "30% d'XP en récolte et plantation", "20% de récoltes suplémentaires et 20% de chances de plantation", "+40 en Sagesse" ];
+
+	oracle.innerHTML = "Le bonus du jour est " + almatext[almajour];
+	demain.innerHTML = "Le bonus de demain sera " + almatext[alamdemain];
+		
+ </script>
+
+
+
+<style type="text/css">
+	html { background-image : url("almaBG.png"); background-size: 100%; background-position: 0 -130px; }
+
+	p { 
+	background-color: #9FF4F7;
+	width: 500px;
+	display: block;
+	font-family: "Overlock",cursive;
+    font-size: 15px;
+    font-style: italic;
+    font-weight: bold;
+    color: #4D7178;
+    text-align: center;
+    border: 5px solid;
+	border-color: #80CDD9;
+	border-radius:10px;
+	margin :150px  35%;
+	padding: 5px; }
+
+	header {
+		margin : 270px;
+	}
+}
+</style>
+</html>
