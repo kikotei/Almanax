@@ -1,0 +1,2 @@
+# Almanax
+Wakfu Almanax
